@@ -1,54 +1,48 @@
-# React + TypeScript + Vite
+# HEICU - HEIC Image Converter Utility
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+HEICU is a browser-based utility that converts HEIC/HEIF images to JPEG or PNG format. Convert Apple photos to standard web formats directly in your browser with no server uploads required.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Convert HEIC/HEIF images to JPEG or PNG
+- Drag and drop interface for easy file uploading
+- Adjust output quality settings
+- Preview converted images before downloading
+- Batch convert multiple files at once
+- Download individual images or all conversions in one click
+- No server uploads - all conversion happens locally in your browser
+- Responsive design works on desktop and mobile
 
-## Expanding the ESLint configuration
+## Technology
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Built with React, TypeScript and Vite
+- Uses heic2any for client-side image conversion
+- Styled with React Bootstrap
+- 100% client-side processing for privacy
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Usage
+
+1. Drag HEIC files onto the drop zone or click to browse
+2. Select your desired output format (JPEG/PNG)
+3. Adjust quality slider if needed
+4. Preview and download converted images
+
+## Development
+
+```bash
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Preview production build
+pnpm preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## License
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+This project is dedicated to the public domain. Do what you like!
